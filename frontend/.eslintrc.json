@@ -1,0 +1,112 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true,
+    "cypress/globals": true
+  },
+  "parser": "babel-eslint",
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/react"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "jsx-a11y",
+    "import",
+    "react-hooks",
+    "cypress"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true, "allowTemplateLiterals": false
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-expressions": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "tron"
+        ]
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "arrow": true,
+        "return": true,
+        "declaration": true
+      }
+    ],
+    "@javascript-eslint/explicit-function-return-type": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "@javascript-eslint/explicit-module-boundary-types": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"]
+      },
+      "javascript": {
+        "paths": [
+          "./src/"
+        ]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
