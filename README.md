@@ -37,13 +37,18 @@ npm v6.14.8
 
 Install the dependencies and devDependencies and start the server.
 Before that, do the git clone of repository and open the folder
+Create a new database (houses_heatmap_db) using postgres, in this project was used Postgres V12
 
 ```sh
 $ cd backend
 $ npm install
+$ knex migrate:make create_houses --env prod
+$ knex migrate:latest --env prod
 $ npm start
 $ npm test
 ```
+
+If you to use tests, your knex should be --env test
 
 This projec was create in Linux environment, so for production environments add the windows environment and alter the package.json.
 
